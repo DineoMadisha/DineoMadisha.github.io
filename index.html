@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dineo Madisha | QA Tester Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <a href="#" class="logo">QA Portfolio</a>
+    <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, My Name Is</h3>
+        <h1>Dineo Madisha</h1>
+        <h3>And I am a <span>QA Software Tester</span></h3>
+        <p>A passionate and detail-oriented QA Tester with experience in manual and automation testing, API testing, and performance analysis. I ensure quality and reliability across software projects.</p>
+
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/dineo-madisha/" target="_blank">
+              <i class='bx bxl-linkedin-square'></i>
+            </a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+          </div>
+          
+        <a href="#" class="btn">Download CV</a>
+    </div>
+    <div class="home-image">
+        <img src="image1.jpeg" alt="Dineo Madisha">
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="image0.jpeg" alt="Dineo">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>QA Engineer | Automation & Manual Testing</h3>
+        <p>I hold a National Diploma in Software Development and ISTQB certification. I'm skilled in Jira, Postman, Playwright, TestRail, and more. My focus is on ensuring quality and performance in software through thorough testing and strong documentation.</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-bug'></i>
+            <h3>Manual Testing</h3>
+            <p>Experienced in test case writing, execution, bug reporting, regression, smoke, and exploratory testing. Skilled with Jira, TestRail, and Excel-based test documentation.</p>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-code'></i>
+            <h3>API Testing</h3>
+            <p>Skilled in using Postman and Swagger for testing REST APIs. Create, validate, and automate test scenarios for various endpoints with different HTTP methods.</p>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-cog'></i>
+            <h3>Automation & CI/CD</h3>
+            <p>Basic experience with Playwright and Selenium for automation scripting. Familiar with version control (Git) and continuous integration pipelines.</p>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="projects">
+    <h2 class="heading">Test <span>Projects</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-cloud-upload'></i>
+            <h3>API Testing Project</h3>
+            <p>Tested login, registration, and checkout features of a mock eCommerce API using Postman. Created collections, assertions, and reported bugs in a shared document.</p>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-desktop'></i>
+            <h3>UI & Functional Testing</h3>
+            <p>Manually tested a frontend React application. Logged bugs on Jira, created test cases in TestRail, and worked with developers during sprint reviews.</p>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-task'></i>
+            <h3>Bug Reports & Documentation</h3>
+            <p>Created clear, detailed bug reports with steps to reproduce, expected vs actual results, and severity levels. Documents are available for download on request.</p>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+   <form action="https://formspree.io/f/xwpldwrg" method="POST">
+    <div class="input-box">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-box">
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="subject" placeholder="Email Subject" required>
+    </div>
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+  
+
+  <script>
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert("Your message has been sent successfully!");
+          form.reset();
+        } else {
+          alert("Oops! There was a problem sending your message.");
+        }
+      }).catch(error => {
+        alert("Something went wrong. Please try again later.");
+      });
+    });
+  </script>
+  
+</section>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>
+</body>
+</html>
