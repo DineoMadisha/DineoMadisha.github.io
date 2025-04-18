@@ -157,8 +157,8 @@ section {
 /* About Section */
 .about {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   gap: 4rem;
   background: var(--second-bg-color);
   flex-wrap: wrap;
