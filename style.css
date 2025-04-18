@@ -236,6 +236,19 @@ section {
   font-size: 1.6rem;
   color: #ccc;
 }
+.servicesb img {
+    width: 50%;  /* Adjust to scale the image to 50% of its original width */
+    height: auto;  /* Maintain the aspect ratio */
+}
+.servicesb img {
+    width: 100%;  /* Set to 100% or your desired size */
+    height: auto;  /* Maintain the aspect ratio */
+    transition: transform 0.3s ease;  /* Smooth transition for the zoom effect */
+}
+  
+  .servicesb img:hover {
+    transform: scale(1.2);  /* Zoom in by 20% when hovered */
+}
 
 /* Contact */
 .contact form {
